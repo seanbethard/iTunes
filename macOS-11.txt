@@ -60,37 +60,16 @@ dP*$  $  $$$ $$$
                                            `"#+$$$$$$$$$$$$$$>
                                                  ""**$$$$$$$$>
                                                         ```""
-
-iTunes
-==============================
-Don't sign in to iCloud.
-If you accidentally signed up for iCloud:
-Log into your account on another device.
-Go to privacy.apple.com. (not apple.com/privacy)
-Submit a request to download your data.
-It may take weeks to prepare and some of it may be unavailable.
-Download what's available and submit a second request to delete it.
-
-macOS 14
-==============================
-If the App Store prevents you from downloading macOS 11 in macOS 14:
-Create backups.
-Download Ventura from the App Store.
-Create bootable Ventura install media:
-`sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/<volume>`.
-Eject bootable media and boot into recovery mode.
-Prepare volumes with disk utility.
-Insert bootable media, reboot and install Ventura.
-Download Big Sur from the App Store.
-Create bootable Big Sur install media:
-`sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/<volume>`.
-Eject bootable media and boot into recovery mode.
-Prepare volumes with disk utility.
-Insert bootable media, reboot and install Big Sur.
-'Member System Preferences?
-
 macOS 11 (clamshell)
 ==============================
+Create backups.
+Download macOS 11 from the App Store.
+If download is unavailable create bootable media from macOS 13.
+Create bootable install media:
+`sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/<volume>`
+Eject and boot into recovery.
+Prepare volumes with disk utility.
+Insert bootable media, reboot and install macOS 11.
 Consider creating an admin account to manage a daily, non-admin account.
 Placeholders in this document: `<volume>`, `<accountid>`, `<keyid>`, `<name>`, `<email>`
 
@@ -154,7 +133,9 @@ cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Applic
 Adjust default settings appropriately for each profile.
 For example,
 Profile for staying logged in to sites: search engine is No Search, new tab page is red.
-Profile for search: default search engine is set, new tab page is green.
+Profile for search: search engine is set, new tab page is green.
+Profile for private search: search engine is set, new tab page is purple, clear data on exit.
+etc.
 
 Encrypted containers
 ==============================
@@ -168,11 +149,11 @@ Install macFUSE:
 Reboot.
 Install VeraCrypt: `https://sourceforge.net/projects/veracrypt/files/VeraCrypt%201.24-Update8/VeraCrypt_Legacy_1.24-Update8.dmg/download`
 Prefer working from encrypted containers when possible.
-Enabling ask to keep changes when closing documents does not disable autosaves.
-Expect repeated autosave failure notifications when editing documents with TextEdit in an encrypted container.
-If disabled, applications will still ask you to keep changes when closing documents.
+Enable ask to keep changes when closing documents to disable autosaves.
+Log out and log back in.
+If disabled, expect repeated autosave failure notifications when editing documents with TextEdit in an encrypted container.
+If disabled, saving a document edited with TextEdit with the same name as the version you are editing requires closing, saving, and duplicating the edited document, then closing, renaming and saving the duplicate document before replacing the edited document with the newly created duplicate.
 Note that VeraCrypt containers do not implement file versioning.
-To save a document edited with TextEdit with the same name as the version you are editing (normally one step) it is necessary to close, save, duplicate, save, rename, save and replace the document (seven steps).
 
 Password manager
 ==============================
@@ -314,7 +295,18 @@ git config --global commit.gpgsign true
 git config --global --unset gpg.format
 git config --global user.signingkey <keyid>
 git commit -m "implicit -S" && git push
+
 ```
+
+iTunes
+==============================
+Don't use iCloud.
+If you accidentally signed up for iCloud:
+Log into your account on another device.
+Go to privacy.apple.com. (not apple.com/privacy)
+Submit a request to download your data.
+It may take weeks to prepare and some of it may be unavailable.
+Download what's available and submit a second request to delete it.
 
 TODO:
 
