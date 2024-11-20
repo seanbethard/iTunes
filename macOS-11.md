@@ -1,0 +1,353 @@
+      .____.
+   xuu$``$$$uuu.
+ . $``$  $$$`$$$
+dP*$  $  $$$ $$$
+?k $  $  $$$ $$$
+ $ $  $  $$$ $$$
+ ":$  $  $$$ $$$
+  N$  $  $$$ $$$
+  $$  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $$#$  $$$ $$$
+   $$'$  $$$ $$$
+   $$`R  $$$ $$$
+   $$$&  $$$ $$$
+   $#*$  $$$ $$$
+   $  $  $$$ @$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $B$ $$&.
+   $  $  $D$ $$$$$muL.
+   $  $  $Q$ $$$$$  `"**mu..
+   $  $  $R$ $$$$$    k  `$$*t
+   $  @  $$$ $$$$$    k   $$!4
+   $ x$uu@B8u$NB@$uuuu6...$$X?
+   $ $(`RF`$`````R$ $$5`"""#"R
+   $ $" M$ $     $$ $$$      ?
+   $ $  ?$ $     T$ $$$      $
+   $ $F H$ $     M$ $$K      $  ..
+   $ $L $$ $     $$ $$R.     "d$$$$Ns.
+   $ $~ $$ $     N$ $$X      ."    "%2h
+   $ 4k f  $     *$ $$&      R       "iN
+   $ $$ %uz!     tuuR$$:     Buu      ?`:
+   $ $F          $??$8B      | '*Ned*$~L$
+   $ $k          $'@$$$      |$.suu+!' !$
+   $ ?N          $'$$@$      $*`      d:"
+   $ dL..........M.$&$$      5       d"P
+ ..$.^"*I$RR*$C""??77*?      "nu...n*L*
+'$C"R   ``""!$*@#""` .uor    bu8BUU+!`
+'*@m@.       *d"     *$Rouxxd"```$
+     R*@mu.           "#$R *$    !
+     *%x. "*L               $     %.
+        "N  `%.      ...u.d!` ..ue$$$o..
+         @    ".    $*"""" .u$$$$$$$$$$$$beu...
+        8  .mL %  :R`     x$$$$$$$$$$$$$$$$$$$$$$$$$$WmeemeeWc
+       |$e!" "s:k 4      d$N"`"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+       $$      "N @      $?$    F$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+       $@       ^%Uu..   R#8buu$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                  ```""*u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                         #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                          "5$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                            `*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                              ^#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                                 "*$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                                   `"*$$$$$$$$$$$$$$$$$$$$$$$>
+                                       ^!$$$$$$$$$$$$$$$$$$$$>
+                                           `"#+$$$$$$$$$$$$$$>
+                                                 ""**$$$$$$$$>
+                                                        ```""
+iTunes
+==============================
+Don't sign in to iCloud.
+If you accidentally signed up for iCloud:
+Log into your account on another device.
+Go to privacy.apple.com. (not apple.com/privacy)
+Submit a request to download your data.
+It may take weeks to prepare and some of it may be unavailable.
+Download what's available and submit a second request to delete it.
+
+macOS 14
+==============================
+If the App Store prevents you from downloading macOS 11 in macOS 14:
+Create backups.
+Download Ventura from the App Store.
+Create bootable Ventura install media:
+`sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/<volume>`.
+Eject bootable media and boot into recovery mode.
+Prepare volumes with disk utility.
+Insert bootable media, reboot and install Ventura.
+Download Big Sur from the App Store.
+Create bootable Big Sur install media:
+`sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/<volume>`.
+Eject bootable media and boot into recovery mode.
+Prepare volumes with disk utility.
+Insert bootable media, reboot and install Big Sur.
+'Member System Preferences?
+
+macOS 11 (clamshell)
+==============================
+Consider creating an admin account to manage a daily, non-admin account.
+Placeholders in this document: `<volume>`, `<accountid>`, `<keyid>`, `<name>`, `<email>`
+
+Package manager
+==============================
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+`echo >> $HOME/.zprofile`
+`echo 'eval "$(/opt/homebrew/bin/brew shelling)"' >> $HOME/.zprofile`
+`eval "$(/opt/homebrew/bin/brew shellenv)"`
+This also installs command line tools (`xcode-select --install`).
+
+VPN
+==============================
+```
+brew install mullvadvpn
+mullvad account login <accountid>
+mullvad beta-program set on
+mullvad auto-connect set on
+mullvad lockdown-mode set on
+mullvad relay set location us
+mullvad relay set tunnel-protocol wireguard
+mullvad tunnel set ipv6 off
+mullvad connect
+```
+Enable launch app on start-up in GUI (there's no CLI option).
+
+Web client
+==============================
+`brew install lynx`
+`brew install eloston-chromium`
+Configure Default profile:
+Set experimental features in chrome://flags.
+Disable IPv6 probe.
+Prompt to install MIME type files.
+Disable search engine collection.
+Disable beforeunload.
+Force punycode.
+Hide labs button.
+Hide crash bubble.
+Scroll tabs.
+Popups to tabs.
+Keep old history.
+Remove Tabsearch Button.
+Set default search engine.
+Disable third-party cookies.
+Continue where you left off on start-up.
+Always use HTTPS.
+Don't allow sites to send notifications.
+Relaunch.
+Install chrome web store:
+`curl -L https://github.com/NeverDecaf/chromium-web-store/releases/download/v1.5.4.3/Chromium.Web.Store.crx > webstore.crx && open webstore.crx`
+Install uBlock Origin, Dark Reader, New Dark Tab, Video DownloadHelper and KeePassXC-Browser.
+Create five additional profiles and copy settings from Default to each:
+```
+cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Application\ Support/Chromium/Profile\ 1/
+cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Application\ Support/Chromium/Profile\ 2/
+cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Application\ Support/Chromium/Profile\ 3/
+cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Application\ Support/Chromium/Profile\ 4/
+cp -r $HOME/Library/Application\ Support/Chromium/Default/* $HOME/Library/Application\ Support/Chromium/Profile\ 5/
+```
+Adjust default settings appropriately for each profile.
+For example,
+Profile for staying logged in to sites: search engine is No Search, new tab page is red.
+Profile for search: default search engine is set, new tab page is green.
+
+Encrypted containers
+==============================
+Reboot into recovery.
+Select startup disk.
+Reboot into recovery.
+Update security policy to allow kexts.
+Reboot.
+Install macFUSE:
+`curl -L https://github.com/osxfuse/osxfuse/releases/download/macfuse-4.8.2/macfuse-4.8.2.dmg > macfuse-4.8.2.dmg && open macfuse-4.8.2.dmg`
+Reboot.
+Install [VeraCrypt](`https://sourceforge.net/projects/veracrypt/files/VeraCrypt%201.24-Update8/VeraCrypt_Legacy_1.24-Update8.dmg/download`).
+Prefer working from encrypted containers when possible.
+Enabling ask to keep changes when closing documents does not disable autosaves.
+Expect repeated autosave failure notifications when editing documents with TextEdit in an encrypted container.
+If disabled, applications will still ask you to keep changes when closing documents.
+Note that VeraCrypt containers do not implement file versioning.
+To save a document edited with TextEdit with the same name as the version you are editing (normally one step) it is necessary to close, save, duplicate, save, rename, save and replace the document (seven steps).
+
+Password manager
+==============================
+brew install keepassxc
+Minimize when closed.
+Don't lock when lid is closed.
+Open most recent database on startup.
+Download icons with DuckDuckGo.
+Enable browser integration with Chromium.
+Keep password database and keyfiles in encrypted containers.
+
+System Preferences
+==============================
+Celebrate the fact that you're not in System Settings and will never see a yellow dot.
+Set appearance, accent and highlight colors.
+Always show scroll bars and jump to the spot that's clicked.
+eloston-chromium (Chromium) is the default browser.
+Disable handoff.
+Top right corner activates screen saver, which starts after five minutes.
+Keep only Terminal, TextEdit, Chromium, VeraCrypt and System Preferences in the dock.
+Don't show recent applications in the dock and make it a little smaller.
+Show only sound, bluetooth, display, time machine and battery in menu bar.
+Hide AM/PM.
+Ignore control center icon.
+Remove all iOS Desktop widgets from notification center.
+No rearranging spaces.
+Displays do not have separate spaces.
+Right option shows desktop.
+No asking or listening for Siri.
+Select Siri Suggestions & Privacy.
+Click into all twelve iTunes apps and uncheck show suggestions and learn from this app.
+Show only applications, folders and system preferences in spotlight search results.
+Disable notifications for all apps except Chromium and VPN and always show previews.
+Only use Touch ID to unlock device.
+Increase scroll speed and enable three finger drag.
+Press option five times to enable mouse keys.
+Increase the size of the menu bar and the cursor.
+Requre password four hours after sleep or screen saver.
+Allow apps from identified developers.
+Enable disk encryption and write down your recovery key.
+Block all incoming traffic until you configure a Samba server.
+Terminal gets full disk access.
+Log out after sixty minutes of inactivity.
+Require admin password for system-wide settings.
+No analytics or personalized ads.
+Don't check for software updates but do run up-to-date software.
+Ignore available macOS 15 update after a check is made anyway.
+Axe update badge with `defaults write com.apple.systempreferences AttentionPrefBundleIDs 0;killall Dock`.
+Require admin to change networks or turn off Wi-Fi.
+Verify that your loopback interface is your DNS server.
+Verify that there are no entries in search domains.
+Pair bluetooth peripherals and allow them to wake computer.
+Set crystal alert volume to 50% and mic volume to 0%.
+No start-up sound, sound effects or volume feedback.
+Touch bar shows expanded control strip.
+Select customize control strip.
+Remove Siri, drag brightness controls to the left of volume, swap launchpad and mission control.
+Tap to silent click.
+Turn up the tracking speed a little.
+Enable exposé (mission control) gesture.
+Set hours for night shift.
+Disable sidecar.
+
+Finder
+==============================
+Show computer and home folder in sidebar.
+Show status bar and hidden files:
+`defaults write com.apple.finder ShowStatusBar -bool true`
+`defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder`
+
+Terminal
+==============================
+No audible bell.
+
+Power
+==============================
+When plugged in turn display off after ten minutes.
+Don't sleep when display is off or wake for network access.
+
+GPG Suite
+==============================
+`brew install gpg-suite`
+No Finder access.
+Delete "applet" entry added to full disk access view.
+
+Keybase PGP
+==============================
+`brew install keybase`
+Finder integration is broken in macOS 11 so no need to disable or remove it.
+`sudo bash -c "echo '/Applications/Keybase.app/Contents/SharedSupport/bin' > /etc/paths.d/Keybase"`
+`keybase pgp export | gpg --import`
+`keybase pgp export -s | gpg --allow-secret-key-import --import`
+Enter passphrase to protect key.
+Enter it again to confirm and again to import.
+
+GPG
+==============================
+`gpg --armor --export <email> > public.key`
+`gpg --list-secret-keys --keyid-format LONG`
+`echo 'it works' | gpg --clearsign`
+Paste in GitHub:
+`gpg --armor --export <keyid> | pbcopy`
+
+SSH
+==============================
+```
+ssh-keygen -b 4096 -t rsa -C "<email>"
+ssh-keygen -t ed25519 -C "<email>"
+eval "$(ssh-agent -s)"
+cat <<EOT>> ~/.ssh/config
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/id_rsa
+EOT
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/id_rsa.pub 
+chmod 644 ~/.ssh/id_ed25519.pub 
+chmod 600 ~/.ssh/id_rsa    
+chmod 600 ~/.ssh/id_ed25519
+```
+
+Add to ssh-agent and Keychain:
+`ssh-add -K ~/.ssh/id_ed25519`
+`ssh-add -K ~/.ssh/id_rsa`
+
+Paste in GitHub:
+`cat ~/.ssh/id_rsa | pbcopy`
+`cat ~/.ssh/id_ed25519 | pbcopy`
+
+Git
+==============================
+```
+brew install git
+git config --global user.name "<name>" 
+git config --global user.email "<email>"
+git config --global commit.gpgsign true
+git config --global --unset gpg.format
+git config --global user.signingkey <keyid>
+git commit -m "implicit -S" && git push
+```
+
+TODO:
+
+Window manager
+==============================
+```
+brew install hammerspoon
+curl -L https://github.com/Hammerspoon/hammerspoon/releases/download/0.9.100/Hammerspoon-0.9.100.zip > hammerspoon-big-sur.zip && open hammerspoon-big-sur.zip
+mv Hammerspoon.app /Applications && rm hammerspoon-big-sur.zip && open /Applications/Hammerspoon.app
+```
+Launch at login, show in menu bar, allow notifications and allow it to control your computer.
+brew install bettertouchtool
+
+brew install tree
+brew install fish
+brew install emacs
+brew install sublime-text
+brew install iterm2
+brew install tmux
+brew install quicksilver
+brew install vlc
+brew install ableton-live-suite@11
+brew install loopback
+brew install audio-hijack
+brew install eclipse-ide
+brew install gcc
+brew install jq
+brew install awscli
+brew install mactex
+brew install utm
+brew install opencore-patcher
+brew install tunnelblick
+brew install viscosity
+
+ASCII art from [ASCII Art Archive](https://www.asciiart.eu/(https://www.asciiart.eu/)
+
+This document could not be autosaved.
