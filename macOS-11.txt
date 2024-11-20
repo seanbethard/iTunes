@@ -60,6 +60,7 @@ dP*$  $  $$$ $$$
                                            `"#+$$$$$$$$$$$$$$>
                                                  ""**$$$$$$$$>
                                                         ```""
+
 iTunes
 ==============================
 Don't sign in to iCloud.
@@ -165,7 +166,7 @@ Reboot.
 Install macFUSE:
 `curl -L https://github.com/osxfuse/osxfuse/releases/download/macfuse-4.8.2/macfuse-4.8.2.dmg > macfuse-4.8.2.dmg && open macfuse-4.8.2.dmg`
 Reboot.
-Install [VeraCrypt](`https://sourceforge.net/projects/veracrypt/files/VeraCrypt%201.24-Update8/VeraCrypt_Legacy_1.24-Update8.dmg/download`).
+Install VeraCrypt: `https://sourceforge.net/projects/veracrypt/files/VeraCrypt%201.24-Update8/VeraCrypt_Legacy_1.24-Update8.dmg/download`
 Prefer working from encrypted containers when possible.
 Enabling ask to keep changes when closing documents does not disable autosaves.
 Expect repeated autosave failure notifications when editing documents with TextEdit in an encrypted container.
@@ -348,6 +349,6 @@ brew install opencore-patcher
 brew install tunnelblick
 brew install viscosity
 
-ASCII art from [ASCII Art Archive](https://www.asciiart.eu/(https://www.asciiart.eu/)
+ASCII art: https://www.asciiart.eu/
 
 This document could not be autosaved.
